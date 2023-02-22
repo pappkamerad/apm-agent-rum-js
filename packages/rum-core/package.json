@@ -17,6 +17,7 @@
   },
   "scripts": {
     "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "build": "run-p build:*",
     "build:main": "BABEL_ENV=BROWSER_PROD npx babel src -d dist/lib",
     "build:module": "BABEL_ENV=BROWSER_ESM_PROD npx babel src -d dist/es",

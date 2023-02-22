@@ -32,6 +32,7 @@ export default function throttle(fn, onThrottle, opts) {
   return function () {
     counter++
     if (typeof timeoutId === 'undefined') {
+      console.log('=== start timeout')
       timeoutId = setTimeout(function () {
         counter = 0
         timeoutId = undefined
